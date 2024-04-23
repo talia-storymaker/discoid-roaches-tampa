@@ -1,0 +1,84 @@
+/* vars */
+
+:root {
+  --light: #EFEBE9;
+  --dark: #7b3a26;
+}
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+/* basics */
+
+body {
+  font-family: Segoe UI, Ebrima, Helvetica, sans-serif;
+}
+
+header, footer {
+  background-color: var(--light);
+}
+
+footer {
+  text-align: right;
+}
+
+main {
+  min-height: 85vh;
+}
+
+.contents {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+p, ul {
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+li:last-of-type {
+  margin-bottom: 0;
+}
+
+b, strong {
+  color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* figure list */
+
+.figure-list {
+  list-style-type: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 30em) {
+  .figure-list {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+
+.price {
+  color: #D10000;
+  font-size: 1.5rem;
+}
