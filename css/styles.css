@@ -3,6 +3,8 @@
 :root {
   --light: #EFEBE9;
   --dark: #7b3a26;
+  --emphasis: #D10000;
+  --link: #008A00;
 }
 
 /* reset */
@@ -18,22 +20,59 @@ body {
   font-family: Segoe UI, Ebrima, Helvetica, sans-serif;
 }
 
+.contents {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* header and footer */
+
 header, footer {
   background-color: var(--light);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  background: #fff;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 2px var(--link) solid;
+}
+
+header nav a img {
+  max-height: 1.25rem;
+}
+
+@media (min-width: 48em) {
+  header .contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
 }
 
 footer {
   text-align: right;
 }
 
+/* content */
+
 main {
   min-height: 85vh;
-}
-
-.contents {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,11 +80,34 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dark);
 }
 
-p, ul {
+h1 {
+  max-width: max-content;
+  margin-inline: auto;
+  margin-bottom: 1em;
+}
+
+.h1-container {
+  background-image: url('../img/leaf-litter.jpg')
+}
+
+h1 span {
+  background: #0007;
+  color: #fff;
+  display: inline-block;
+  padding-inline: 1rem;
+  border-radius: .25rem;
+}
+
+.h1-desc {
+  font-style: italic;
+  margin-left: 3em;
+}
+
+p, main ul {
   margin-bottom: 1rem;
 }
 
-li {
+main li {
   margin-bottom: .5rem;
 }
 
@@ -59,6 +121,19 @@ b, strong {
 
 img {
   max-width: 100%;
+}
+
+.important {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--link);
+  font-weight: bold;
+}
+
+a:hover, a:focus {
+  text-decoration-thickness: 3px;
 }
 
 /* figure list */
@@ -79,6 +154,6 @@ img {
 }
 
 .price {
-  color: #D10000;
+  color: var(--emphasis);
   font-size: 1.5rem;
 }
