@@ -5,6 +5,7 @@
   --dark: #7b3a26;
   --emphasis: #D10000;
   --link: #008A00;
+  --link-light: #99FF99;
 }
 
 /* reset */
@@ -32,8 +33,20 @@ header, footer {
   background-color: var(--light);
 }
 
+.header-logo {
+  max-width: 10rem;
+}
+
 header nav ul {
   list-style-type: none;
+}
+
+header nav li {
+  margin-bottom: 1rem;
+}
+
+header nav li:last-of-type {
+  margin-bottom: 0;
 }
 
 header nav a {
@@ -62,6 +75,10 @@ header nav a img {
     display: flex;
     gap: 1rem;
     align-items: center;
+  }
+
+  header nav li {
+    margin-bottom: 0;
   }
 }
 
@@ -100,7 +117,12 @@ h1 span {
 
 .h1-desc {
   font-style: italic;
-  margin-left: 3em;
+}
+
+@media (min-width: 50em) {
+  .h1-desc {
+    margin-left: 3em;
+  }
 }
 
 p, main ul {
@@ -130,10 +152,13 @@ img {
 a {
   color: var(--link);
   font-weight: bold;
+  word-break: break-all;
 }
 
 a:hover, a:focus {
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 2px;
+  color: #000;
+  background-color: var(--link-light);
 }
 
 /* figure list */
